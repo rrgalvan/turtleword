@@ -11,12 +11,17 @@ class TortugaSencilla(object):
         self.orientacion = np.array([0, 1])
         self.ruta = [self.posicion]
         self.nombre = nombre
+        self.posicion_original = self.posicion
+        self.orientacion_original = self.orientacion
+
+        # Sistema de ejes de esta torutuga
+        self.fig, self.ax = plt.subplots(figsize=(7, 7))
+        # plt.rcParams["figure.figsize"] = [7, 7]  # tamaño de la figura
 
     def print_info(self):
-        print(f"Tortuga {self.nombre:}")
+        print(f"Tortuga '{self.nombre}")
         print(f"  Posición   : {self.posicion}")
         print(f"  Orientación: {self.orientacion}")
-        print("Icono de la tortuga:\n")
 
     def avanza(self, distancia):
         "Avanza una distancia determinada"
@@ -31,14 +36,16 @@ class TortugaSencilla(object):
         self.orientacion = np.dot(M, self.orientacion)
 
     def plot(self):
-        """Pinta la ruta de la tortuga. Pinta el icono de la tortuga en la dirección en la que apunta al final de la ruta salvo que se le indique lo contrario"""
+        """Pinta la ruta de la tortuga"""
         listax = [P[0] for P in self.ruta]
         listay = [P[1] for P in self.ruta]
 
-        fig, ax = plt.subplots()
-        plt.rcParams["figure.figsize"] = [10, 10]  # tamaño de la figura
-        ax.plot(listax, listay)
+        self.ax.plot(listax, listay)
 
-        #obtengo el angulo en el que apunta la tortuga al terminar la ruta, medido respecto de la parte positiva del eje OY
-        angulo = np.rad2deg(np.arctan2(
-                self.orientacion[1], self.orientacion[0]))-90
+    def limpia_grafica(self):
+        plt.clf()
+
+    def reinicia(self):
+        self.posicion = self.posicion_original
+        self.orientacion = self.orientacion_original
+        self.ruta = [self.posicion]
