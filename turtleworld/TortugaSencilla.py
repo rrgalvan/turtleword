@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pylab as plt
 
 
-class Tortuga(object):
+class TortugaSencilla(object):
     "Tortuga sencilla"
 
     def __init__(self, nombre="Dora"):
