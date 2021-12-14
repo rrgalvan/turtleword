@@ -18,8 +18,6 @@ class TortugaConIcono(TortugaSencilla):
     Utiliza la biblioteca opencv para procesado de imágenes
     """
 
-    viva = True
-
     def __init__(self, nombre="Dora", icono="turtle.png"):
         "Constructor de un objeto de tipo TortugaConIcono"
         # Llamar al constructor de la clase base

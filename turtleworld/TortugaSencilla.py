@@ -5,6 +5,8 @@ import matplotlib.pylab as plt
 class TortugaSencilla(object):
     "Tortuga sencilla"
 
+    viva = True
+
     def __init__(self, nombre="Dora"):
         "Constructor"
         self.posicion = np.array([0, 0])
