@@ -10,7 +10,7 @@ La tortuga gira progresivamente presionando repetidamente las teclas <, > de dir
 
 La tortuga acelera progresivamente presionando repetidamente la tecla ^ de dirección.
 
-La tortuga acelera progresivamente presionando repetidamente la tecla v de dirección.
+La tortuga decelera progresivamente presionando repetidamente la tecla v de dirección.
 
 Está pendiente comentar el código, aunque ya está disponible
 
