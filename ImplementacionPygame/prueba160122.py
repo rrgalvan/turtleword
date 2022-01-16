@@ -91,6 +91,7 @@ class TortugaPacifica(pygame.sprite.Sprite):
         self.speed = 0
         self.IA = Player
 
+        # Da una orientación aleatoria a las tortugas controladas por IA
         if self.IA:
             self.orientacion = 180
             self.image = load_image(img, True)
