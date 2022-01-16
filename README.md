@@ -6,13 +6,13 @@ Mundo de tortugas programadas como objetos en Python
 
 La tortuga dispara con la tecla espacio.
 
-La tortuga gira progresivamente presionando repetidamente las teclas <, > de dirección.
+La tortuga se mueve manteniendo pulsando las teclas <, > de dirección.
 
-La tortuga acelera progresivamente presionando repetidamente la tecla ^ de dirección.
+La tortuga se mueve manteniendo pulsando la tecla ^ de dirección.
 
 La tortuga decelera progresivamente presionando repetidamente la tecla v de dirección.
 
-Está pendiente comentar el código, aunque ya está disponible
+
 
 ## Ideas por hacer
 - Implementar una clase 'MundoTortugas' en el que convivan distintos objetos de tipo tortuga
